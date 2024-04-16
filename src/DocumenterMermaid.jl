@@ -33,7 +33,9 @@ function Documenter.HTMLWriter.domify(dctx::DCtx, node::Node, ::MermaidScriptBlo
     import mermaid from '$MERMAID';
     mermaid.initialize({
         startOnLoad: true,
-        theme: "neutral"
+        theme: "neutral",
+        deterministicIds: true,
+        flowchart: { htmlLabels: true },
     });
     """)
 end
